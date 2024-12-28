@@ -127,7 +127,7 @@ class Sk extends CI_Controller
     public function tambah_sk()
     {
         if ($this->input->is_ajax_request() == TRUE) {
-            $this->form_validation->set_rules('penerima', 'Penerima', 'required|numeric|is_unique[surat_keluar.penerima]');
+            $this->form_validation->set_rules('penerima', 'Penerima', 'required|is_unique[surat_keluar.penerima]');
             $this->form_validation->set_rules('pengirim', 'Pengirim', 'required');
             $this->form_validation->set_rules('no_surat', 'No. Surat', 'required');
             $this->form_validation->set_rules('isi', 'Isi Ringkas', 'required|max_length[300]');
