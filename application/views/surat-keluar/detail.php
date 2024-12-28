@@ -13,10 +13,10 @@
             <div class="card shadow card-detail">
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-md-3">Nomor Agenda</div>
+                        <div class="col-md-3">Penerima</div>
                         <div class="col-md-1 d-none d-md-block">:</div>
                         <div class="col-md-8">
-                            <?= $surat['no_agenda']; ?>
+                            <?= $surat['penerima']; ?>
                         </div>
                     </div>
                     <hr>

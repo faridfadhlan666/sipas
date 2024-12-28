@@ -193,7 +193,7 @@ class Laporan extends CI_Controller
 
             $spreadsheet = new Spreadsheet();
             $sheet = $spreadsheet->getActiveSheet();
-            $sheet->setCellValue('A1', 'NOMOR AGENDA');
+            $sheet->setCellValue('A1', 'PENERIMA');
             $sheet->setCellValue('B1', 'PENGIRIM');
             $sheet->setCellValue('C1', 'NOMOR SURAT');
             $sheet->setCellValue('D1', 'ISI RINGKAS');
@@ -203,7 +203,7 @@ class Laporan extends CI_Controller
 
             $count = 2;
             foreach ($data as $row) {
-                $sheet->setCellValue('A' . $count, $row['no_agenda']);
+                $sheet->setCellValue('A' . $count, $row['penerima']);
                 $sheet->setCellValue('B' . $count, $row['pengirim']);
                 $sheet->setCellValue('C' . $count, $row['no_surat']);
                 $sheet->setCellValue('D' . $count, $row['isi']);

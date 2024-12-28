@@ -3,9 +3,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Sk_model extends CI_Model
 {
-    var $column_order = [null, 'no_agenda', 'pengirim', null, 'tgl_surat', null]; // Field yang bisa orderable
-    var $column_search = ['no_agenda', 'pengirim', 'no_surat', 'isi', 'keterangan']; // field yang diizin utk pencarian
-    var $order = ['no_agenda' => 'asc']; // default order
+    var $column_order = [null, 'penerima', 'pengirim', null, 'tgl_surat', null]; // Field yang bisa orderable
+    var $column_search = ['penerima', 'pengirim', 'no_surat', 'isi', 'keterangan']; // field yang diizin utk pencarian
+    var $order = ['penerima' => 'asc']; // default order
 
     private function _get_datatables_query()
     {
@@ -65,7 +65,7 @@ class Sk_model extends CI_Model
     public function getSuratKeluar($id = false)
     {
         if ($id == false) {
-            $this->db->order_by('no_agenda', 'ASC');
+            $this->db->order_by('penerima', 'ASC');
             return $this->db->get('surat_keluar')->result_array();
         } else {
             $this->db->where('id', $id);
@@ -76,7 +76,7 @@ class Sk_model extends CI_Model
     public function insert_data($file = false)
     {
         $data = [
-            'no_agenda' => $this->input->post('no_agenda', true),
+            'penerima' => $this->input->post('penerima', true),
             'pengirim' => $this->input->post('pengirim', true),
             'no_surat' => $this->input->post('no_surat', true),
             'isi' => $this->input->post('isi', true),
@@ -101,7 +101,7 @@ class Sk_model extends CI_Model
     {
 
         $id = $this->input->post('id');
-        $no_agenda = $this->input->post('no_agenda', true);
+        $penerima = $this->input->post('penerima', true);
         $pengirim = $this->input->post('pengirim', true);
         $no_surat = $this->input->post('no_surat', true);
         $isi = $this->input->post('isi', true);
@@ -117,7 +117,7 @@ class Sk_model extends CI_Model
             $this->db->set('file', $file);
         }
 
-        $this->db->set('no_agenda', $no_agenda);
+        $this->db->set('penerima', $penerima);
         $this->db->set('pengirim', $pengirim);
         $this->db->set('no_surat', $no_surat);
         $this->db->set('isi', $isi);
@@ -155,7 +155,7 @@ class Sk_model extends CI_Model
         $enddate = $this->input->post('enddate');
         $filterby = $this->input->post('filterby');
 
-        return $this->db->query("SELECT * FROM `surat_keluar` WHERE " . $filterby . " BETWEEN '" . $startdate . "' AND '" . $enddate . "' ORDER BY no_agenda")->result_array();
+        return $this->db->query("SELECT * FROM `surat_keluar` WHERE " . $filterby . " BETWEEN '" . $startdate . "' AND '" . $enddate . "' ORDER BY penerima")->result_array();
     }
 
     public function getSkByDate()
@@ -174,7 +174,7 @@ class Sk_model extends CI_Model
             $this->db->where('tgl_diterima <=', $tgl_akhir);
         }
 
-        $this->db->order_by('no_agenda', 'ASC');
+        $this->db->order_by('penerima', 'ASC');
         $this->db->select('*');
         return $this->db->get('surat_keluar')->result_array();
     }

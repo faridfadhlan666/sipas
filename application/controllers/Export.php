@@ -217,7 +217,7 @@ class Export extends CI_Controller
 
             foreach ($data['surat-keluar'] as $row) {
                 $sheet->setCellValue('A' . $baris, $no++);
-                $sheet->setCellValue('B' . $baris, $row->no_agenda);
+                $sheet->setCellValue('B' . $baris, $row->penerima);
                 $sheet->setCellValue('C' . $baris, $row->pengirim);
                 $sheet->setCellValue('D' . $baris, $row->no_surat);
                 $sheet->setCellValue('E' . $baris, $row->isi);

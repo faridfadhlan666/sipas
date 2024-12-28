@@ -14,8 +14,8 @@
                     <div class="row">
                         <div class="col-md-6 col-sm-12">
                             <div class="form-group">
-                                <label for="no_agenda">No. Agenda</label>
-                                <input type="text" name="no_agenda" id="no_agenda" class="form-control" value="<?= set_value('no_agenda'); ?>">
+                                <label for="penerima">Penerima</label>
+                                <input type="text" name="penerima" id="penerima" class="form-control" value="<?= set_value('penerima'); ?>">
                                 <div class="invalid-feedback"></div>
                             </div>
                             <div class="form-group">

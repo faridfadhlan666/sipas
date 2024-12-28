@@ -152,7 +152,7 @@
                         if (res.data.length > 0) {
                             $.each(res.data, function(key, val) {
                                 content += '<tr><td>' + ++key + '</td>';
-                                content += '<td><table class="table-borderless"><tr><td><b>No. Agenda</b></td><td>:</td><td>' + val.no_agenda + '</td>';
+                                content += '<td><table class="table-borderless"><tr><td><b>Penerima</b></td><td>:</td><td>' + val.penerima + '</td>';
                                 content += '</tr><tr><td><b>Pengirim</b></td><td>:</td><td>' + val.pengirim + '</td></tr>';
                                 content += '<tr><td><b>No. Surat</b></td><td>:</td><td>' + val.no_surat + '</td></tr>';
                                 content += '<tr><td><b>Isi Ringkas</b></td><td>:</td><td class="text-justify">' + val.isi + '</td></tr>';

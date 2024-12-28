@@ -89,7 +89,7 @@ INSERT INTO `sifat` (`id`, `sifat`) VALUES
 
 CREATE TABLE `surat_keluar` (
   `id` int(11) NOT NULL,
-  `no_agenda` int(11) NOT NULL,
+  `penerima` varchar(128) NOT NULL,
   `pengirim` varchar(128) NOT NULL,
   `no_surat` varchar(128) NOT NULL,
   `isi` text NOT NULL,

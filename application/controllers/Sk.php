@@ -55,7 +55,7 @@ class Sk extends CI_Controller
                 </div>";
 
                 $row[] = "<input type=\"checkbox\" class=\"centangId\" value=\"$field->id\" name=\"id[]\">";
-                $row[] = $field->no_agenda;
+                $row[] = $field->penerima;
                 $row[] = $field->pengirim;
                 $row[] = $field->no_surat;
                 $row[] = date('d/m/Y', strtotime($field->tgl_surat));
@@ -127,7 +127,7 @@ class Sk extends CI_Controller
     public function tambah_sk()
     {
         if ($this->input->is_ajax_request() == TRUE) {
-            $this->form_validation->set_rules('no_agenda', 'No. Agenda', 'required|numeric|is_unique[surat_keluar.no_agenda]');
+            $this->form_validation->set_rules('penerima', 'Penerima', 'required|numeric|is_unique[surat_keluar.penerima]');
             $this->form_validation->set_rules('pengirim', 'Pengirim', 'required');
             $this->form_validation->set_rules('no_surat', 'No. Surat', 'required');
             $this->form_validation->set_rules('isi', 'Isi Ringkas', 'required|max_length[300]');
@@ -137,7 +137,7 @@ class Sk extends CI_Controller
             $this->form_validation->set_error_delimiters('', '', '');
             if ($this->form_validation->run() == FALSE) {
                 $errors  = [
-                    'no_agenda' => form_error('no_agenda'),
+                    'penerima' => form_error('penerima'),
                     'pengirim' => form_error('pengirim'),
                     'no_surat' => form_error('no_surat'),
                     'isi' => form_error('isi'),
@@ -215,15 +215,15 @@ class Sk extends CI_Controller
     {
         if ($this->input->is_ajax_request() == TRUE) {
             $id = $this->input->post('id');
-            $noAgenda = $this->input->post('no_agenda');
+            $noAgenda = $this->input->post('penerima');
             $sk = $this->sk->getSuratKeluar($id);
 
-            if ($sk['no_agenda'] == $noAgenda) {
-                $ruleAgenda = 'required|numeric';
+            if ($sk['penerima'] == $penerima) {
+                $rulePenerima = 'required';
             } else {
-                $ruleAgenda = 'required|numeric|is_unique[surat_keluar.no_agenda]';
+                $rulePenerima = 'required|is_unique[surat_keluar.penerima]';
             }
-            $this->form_validation->set_rules('no_agenda', 'No. Agenda', $ruleAgenda);
+            $this->form_validation->set_rules('penerima', 'Penerima', $rulePenerima);
             $this->form_validation->set_rules('no_surat', 'No. Surat', 'required');
             $this->form_validation->set_rules('pengirim', 'Pengirim', 'required');
             $this->form_validation->set_rules('isi', 'Isi Ringkas', 'required|max_length[300]');
@@ -234,7 +234,7 @@ class Sk extends CI_Controller
             if ($this->form_validation->run() == FALSE) {
 
                 $errors  = [
-                    'no_agenda' => form_error('no_agenda'),
+                    'penerima' => form_error('penerima'),
                     'pengirim' => form_error('pengirim'),
                     'no_surat' => form_error('no_surat'),
                     'isi' => form_error('isi'),

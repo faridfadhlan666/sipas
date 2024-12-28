@@ -25,7 +25,7 @@
                                     <th>
                                         <input type="checkbox" class="centangSemua">
                                     </th>
-                                    <th>No. Agenda</th>
+                                    <th>Penerima</th>
                                     <th>Pengirim</th>
                                     <th>No. Surat</th>
                                     <th>Tanggal Surat</th>

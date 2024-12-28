@@ -49,7 +49,7 @@
         <?php if (!empty($sk)) : ?>
         <?php foreach($sk as $row) : ?>
         <tr>
-            <td style="width: 6%"><?= $row['no_agenda']; ?></td>
+            <td style="width: 6%"><?= $row['penerima']; ?></td>
             <td style="width: 18%"><?= $row['pengirim']; ?></td>
             <td style="width: 12%"><?= $row['no_surat']; ?></td>
             <td style="width: 25%"><?= $row['isi']; ?></td>
