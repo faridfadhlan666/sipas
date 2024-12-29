@@ -6,6 +6,7 @@
 
     <!-- Topbar -->
     <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+      <p style="font-size: 20px; color:rgb(61, 26, 0); padding-top: 10px;"> Sistem Informasi Pengarsipan Surat Kementerian Pertahanan </p>
 
       <!-- Sidebar Toggle (Topbar) -->
       <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
