@@ -1,4 +1,4 @@
-<body class="bg-gradient-primary">
+<body class="bg-gradient" style="background-color: #A0522D;">
 
   <div class="container">
 
@@ -31,14 +31,14 @@
                         <?= form_error('email') ?>
                       </div>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-user btn-block">
+                    <button type="submit" class="btn btn-user btn-block" style="background-color: #A0522D; color: white; border: none;">
                       Reset Password
                     </button>
                   </form>
 
                   <hr>
                   <div class="text-center">
-                    <a class="small" href="<?= base_url('auth'); ?>">Sudah punya akun? Login!</a>
+                    <a class="small" style="color:rgb(66, 21, 0);" href="<?= base_url('auth'); ?>">Sudah punya akun? Login!</a>
                   </div>
                 </div>
               </div>

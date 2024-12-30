@@ -43,10 +43,10 @@
                             <!-- /. end of form registration -->
                             <hr>
                             <div class="text-center">
-                                <a class="small" href="<?= base_url('auth/forgot-password'); ?>">Lupa Password?</a>
+                                <a class="small" style="color:rgb(66, 21, 0);" href="<?= base_url('auth/forgot-password'); ?>">Lupa Password?</a>
                             </div>
                             <div class="text-center">
-                                <a class="small" href="<?= base_url(); ?>">Sudah punya akun? Login!</a>
+                                <a class="small" style="color:rgb(66, 21, 0);" href="<?= base_url(); ?>">Sudah punya akun? Login!</a>
                             </div>
                         </div>
                         <!-- /. padding-5 -->

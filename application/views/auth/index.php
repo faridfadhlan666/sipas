@@ -10,7 +10,7 @@
                 <!-- Nested Row within Card Body -->
                 <div class="row">
                   <div class="col-lg-6">
-                    <img class="img-fluid d-none d-sm-block mt-4" src="<?= base_url('assets/'); ?>img/bg-login.svg">
+                    <img class="img-fluid d-none d-sm-block mt-4" src="<?= base_url('assets/'); ?>img/bg-login.png">
                   </div>
                   <div class="col-lg-6">
                     <div class="p-5">
@@ -39,10 +39,10 @@
                       </form>
                       <hr>
                       <div class="text-center">
-                        <a class="small" href="<?= base_url('auth/forgot-password'); ?>">Lupa Password?</a>
+                        <a class="small" style="color:rgb(66, 21, 0);" href="<?= base_url('auth/forgot-password'); ?>">Lupa Password?</a>
                       </div>
                       <div class="text-center">
-                        <a class="small" href="<?= base_url('auth/registrasi'); ?>">Belum punya akun? Registrasi!</a>
+                        <a class="small" style="color:rgb(66, 21, 0);" href="<?= base_url('auth/registrasi'); ?>">Belum punya akun? Registrasi!</a>
                       </div>
                     </div>
                   </div>
