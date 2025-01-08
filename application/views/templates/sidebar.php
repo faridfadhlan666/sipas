@@ -6,7 +6,7 @@
     <div class="sidebar-brand-icon">
       <img src="<?= base_url('assets/img/logo_kemhan.png'); ?>" alt="logo" width="40" height="40">
     </div>
-    <div class="sidebar-brand-text mx-3">SIPAS</div>
+    <div class="sidebar-brand-text mx-3">DIPAS</div>
   </a>
 
   <!-- Heading -->

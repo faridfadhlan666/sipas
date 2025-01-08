@@ -64,8 +64,12 @@ class Sm_model extends CI_Model
 
     public function insert_data($file = false)
     {
+        $this->db->select_max('no_agenda');
+        $result = $this->db->get('surat_masuk')->row_array();
+        $no_agenda_baru = (int)$result['no_agenda'] + 1;
+        
         $data = [
-            'no_agenda' => $this->input->post('no_agenda', true),
+            'no_agenda' => $no_agenda_baru,
             'pengirim' => $this->input->post('pengirim', true),
             'no_surat' => $this->input->post('no_surat', true),
             'isi' => $this->input->post('isi', true),

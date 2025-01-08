@@ -128,7 +128,6 @@ class Sm extends CI_Controller
 
     public function tambah_sm()
     {
-        $this->form_validation->set_rules('no_agenda', 'No. Agenda', 'required|numeric|is_unique[surat_masuk.no_agenda]');
         $this->form_validation->set_rules('no_surat', 'No. Surat', 'required');
         $this->form_validation->set_rules('pengirim', 'Pengirim', 'required');
         $this->form_validation->set_rules('isi', 'Isi Ringkas', 'required|max_length[300]');
